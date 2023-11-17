@@ -15,7 +15,7 @@ abstract class Controller
         $this->ci = $ci;
     }
 
-    public function render (Response $response, $template, $data = [])
+    public function render(Response $response, $template, $data = [])
     {
         $html = $this->ci->get('templating')->render($template, $data); 
         $response->getBody()->write($html); 

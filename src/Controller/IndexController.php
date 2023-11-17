@@ -7,7 +7,7 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 
 class IndexController extends Controller
 {
-    public function homepage (Request $request, Response $response)
+    public function homepage(Request $request, Response $response)
     {
         return $this->render($response, 'homepage.html');
     }
