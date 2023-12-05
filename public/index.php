@@ -27,7 +27,7 @@ $app->get('/details/{id:[0-9]+}', '\App\Controller\AlbumsController:details');
 $app->get('/search', '\App\Controller\AlbumsController:search');
 $app->any('/form', '\App\Controller\AlbumsController:form');
 
-$errorMiddleware = $app->addErrorMiddleware(true, true, true);
+$errorMiddleware = $app->addErrorMiddleware(false, true, true);
 
 $errorMiddleware->setErrorHandler(
     Slim\Exception\HttpNotFoundException::class,
